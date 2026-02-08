@@ -28,6 +28,17 @@
             padding: 60px 0;
         }
 
+        .section-title {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+        }
+
+        .section-subtitle {
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+        
 
 
         /* Hero Gradient */
@@ -457,6 +468,18 @@
         }
 
         .owner-name {
+        .hero-subtitle {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #111;
+            opacity: 0.9;
+        }
+
+        .hero-meta {
+            font-size: 1rem;
+            color: #111;
+            opacity: 0.75;
+        }            
             font-size: 3.5rem; /* Smaller heading */
             font-weight: 600;
             margin-bottom: 0.5rem;
@@ -850,12 +873,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- Big Title -->
         <div class="big-title">
             <div class="owner-name">Arjun Menon</div>
-                        <p class="hero-subtitle mb-2">
-                Business Management Graduate (2:1) • Marketing & Strategy • Client-facing experience
-            </p>
-            <p class="hero-meta mb-3">
-                Loughborough, UK • Open to Graduate roles
-            </p>
         </div>
 
         <!-- Typing Effect -->
@@ -887,7 +904,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="images/about/me.jpeg" class="img-fluid rounded-circle shadow profile-img" alt="About Me">
             </div>
             <div class="col-md-8">
-                <h2>About Me</h2>
+                <h2 class="section-title">About Me</h2>
                 <p class="lead">Hi! I’m Arjun Menon, a Business Management Graduate from Henley Business School, passionate about strategy, marketing, and leadership. I love turning ideas into actionable solutions and building strong client relationships.</p>
             </div>
                             <!-- Flip Cards -->
@@ -1137,7 +1154,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- Contact -->
 <section id="contact" class="bg-light" data-aos="fade-up">
     <div class="container text-center">
-        <h2>Contact Me</h2>
+        <h2 class="section-title">Contact Me</h2>
         <form id="contact-form" class="col-md-8 mx-auto">
             <input type="text" name="user_name" class="form-control mb-3" placeholder="Name" required>
             <input type="email" name="user_email" class="form-control mb-3" placeholder="Email" required>
