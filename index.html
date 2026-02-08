@@ -679,26 +679,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script>
-(function(){
-    emailjs.init("Z580Bm7dGMp3Eohuv"); // Your Public Key
-})();
-
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    const serviceID = "service_wu3papi";
-    const templateID = "__ejs-test-mail-service__";
-
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            alert("✅ Message sent successfully!");
-            this.reset(); // Reset the form
-        }, (err) => {
-            alert("❌ Failed to send message. Please try again.");
-            console.error(err);
-        });
-});
 </script>
 
 <script>
@@ -1089,11 +1069,47 @@ document.addEventListener("DOMContentLoaded", () => {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
-    AOS.init({ duration: 1000 });
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => backToTop.style.display = window.scrollY > 300 ? 'block' : 'none');
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    document.getElementById('toggleDarkMode').addEventListener('click', () => document.body.classList.toggle('dark-mode'));
+document.addEventListener("DOMContentLoaded", () => {
+  // AOS
+  AOS.init({ duration: 1000 });
+
+  // Back to Top
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Dark Mode
+  const toggleDarkMode = document.getElementById("toggleDarkMode");
+  toggleDarkMode.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
+  // EmailJS (Contact Form)
+  emailjs.init("Z580Bm7dGMp3Eohuv");
+
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const serviceID = "service_wu3papi";
+    const templateID = "__ejs-test-mail-service__";
+
+    try {
+      await emailjs.sendForm(serviceID, templateID, form);
+      alert("✅ Message sent successfully!");
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert("❌ Failed to send message. Please try again.");
+    }
+  });
+});
 </script>
 </body>
 </html>
