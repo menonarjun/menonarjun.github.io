@@ -606,11 +606,48 @@
 
 
 
+        /* ============================= */
+        /* Navbar mobile & hover behavior */
+        /* ============================= */
+
+        /* Desktop: hover reveals navbar */
+        @media (min-width: 992px) {
+            .navbar-wrapper:hover {
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile: keep navbar visible */
+        @media (max-width: 991px) {
+            .navbar-wrapper {
+                transform: translateY(0);
+            }
+
+            .nav-arrow {
+                display: none;
+            }
+        }
+
+
+
         /* Gradient Background Animation */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+
+
+        /* ============================= */
+        /* Reduce motion for accessibility */
+        /* ============================= */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
         }
     </style>
 </head>
