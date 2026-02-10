@@ -1173,9 +1173,10 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="container text-center">
         <h2 class="section-title">Contact Me</h2>
         <form id="contact-form" class="col-md-8 mx-auto">
-            <input type="text" name="from_name" class="form-control mb-3" placeholder="Name" required>
-            <input type="email" name="reply_to" class="form-control mb-3" placeholder="Email" required>
+            <input type="text" name="name" class="form-control mb-3" placeholder="Name" required>
+            <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
             <textarea name="message" class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
+            <input type="hidden" name="title" value="Portfolio Contact Form">
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
     </div>
@@ -1236,8 +1237,8 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("✅ Message sent successfully!");
       form.reset();
     } catch (err) {
-      console.error(err);
-      alert("❌ Failed to send message. Please try again.");
+      console.error("EmailJS Error:", err);
+      alert(`❌ Failed to send: ${err?.text || err?.message || "Unknown error"}`);
     }
   });
 });
