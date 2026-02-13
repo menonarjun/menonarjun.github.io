@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
 
     <!-- AOS CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -894,6 +894,154 @@
             .hero-quick-actions a {
                 font-size: 0.9rem;
                 padding: 7px 10px;
+            }
+        }
+
+        /* ============================= */
+        /* Aesthetic Refresh Overrides */
+        /* ============================= */
+        :root {
+            --bg: #f4f7fb;
+            --surface: #ffffff;
+            --ink: #1f2937;
+            --muted: #5b6472;
+            --line: #dde3ec;
+            --brand: #0f4c81;
+            --brand-soft: #e8f1fb;
+            --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
+            --shadow-card: 0 10px 24px rgba(15, 23, 42, 0.07);
+        }
+
+        body {
+            font-family: "Manrope", sans-serif !important;
+            color: var(--ink);
+            background: radial-gradient(circle at 8% 12%, #eef5ff 0%, transparent 38%),
+                        radial-gradient(circle at 92% 6%, #fff1f5 0%, transparent 32%),
+                        var(--bg);
+        }
+
+        h1, h2, h5, .navbar-brand {
+            font-family: "Fraunces", serif !important;
+            letter-spacing: 0.2px;
+        }
+
+        .section-title {
+            text-transform: none;
+            font-size: clamp(1.6rem, 2vw, 2.1rem);
+            margin-bottom: 14px;
+        }
+
+        .lead {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .navbar {
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.9) !important;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .navbar-brand {
+            color: var(--brand) !important;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: #334155 !important;
+        }
+
+        .nav-link:hover {
+            color: var(--brand) !important;
+        }
+
+        .hero {
+            background: linear-gradient(125deg, #dfeeff 0%, #f5e8ff 48%, #fff7eb 100%) !important;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .owner-name {
+            color: #0f172a !important;
+            text-shadow: 0 3px 18px rgba(255, 255, 255, 0.85);
+        }
+
+        .typing-text {
+            color: #334155 !important;
+        }
+
+        .tagline {
+            background: rgba(15, 23, 42, 0.92) !important;
+            color: #f8fafc !important;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-dark {
+            background: var(--brand) !important;
+            border-color: var(--brand) !important;
+        }
+
+        .btn-dark:hover {
+            background: #0d3f6a !important;
+            border-color: #0d3f6a !important;
+        }
+
+        .opportunity-cta {
+            background: linear-gradient(90deg, #0f172a, #1f3b62) !important;
+            box-shadow: var(--shadow-soft);
+        }
+
+        #portfolio,
+        #skills,
+        #contact {
+            background: transparent !important;
+        }
+
+        .timeline-card,
+        .feature-card,
+        .value-card,
+        .flip-card-front,
+        .modal-content {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow-card);
+            border-radius: 14px;
+        }
+
+        .timeline-card:hover,
+        .feature-card:hover,
+        .value-card:hover {
+            transform: translateY(-3px);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            box-shadow: 0 16px 30px rgba(15, 23, 42, 0.1);
+        }
+
+        .feature-metric,
+        .proof-line {
+            color: var(--brand);
+        }
+
+        .hero-quick-actions a {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: rgba(15, 76, 129, 0.2);
+            box-shadow: 0 6px 14px rgba(15, 76, 129, 0.08);
+        }
+
+        .hero-quick-actions a:hover {
+            background: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                padding-top: 90px !important;
+            }
+
+            .owner-name {
+                font-size: 2rem !important;
+            }
+
+            .section-title {
+                font-size: 1.45rem;
             }
         }
     </style>
