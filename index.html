@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arjun Menon</title>
     <meta name="description" content="Arjun Menon is a Business Management graduate from Henley Business School with experience in operations, marketing, and research. Explore projects, experience, and contact details.">
+    <meta property="og:title" content="Arjun Menon | Graduate Business Portfolio">
+    <meta property="og:description" content="Business Management graduate with experience in operations, marketing, and research. View projects, experience, and contact details.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://menonarjun.github.io/">
+    <meta property="og:image" content="https://menonarjun.github.io/images/about/me.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Arjun Menon | Graduate Business Portfolio">
+    <meta name="twitter:description" content="Business Management graduate with experience in operations, marketing, and research.">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -795,6 +803,36 @@
             color: #1d4ed8;
             font-weight: 500;
         }
+
+        .feature-card,
+        .value-card {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            height: 100%;
+            text-align: left;
+        }
+
+        .feature-card h5,
+        .value-card h5 {
+            margin-bottom: 10px;
+        }
+
+        .feature-metric {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1d4ed8;
+            margin: 0;
+        }
+
+        .experience-label {
+            font-size: 0.92rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            margin-top: 8px;
+            color: #0f172a;
+        }
     </style>
 </head>
 
@@ -978,6 +1016,29 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="container text-center">
         <h2 class="section-title">Projects</h2>
         <p class="lead">A selection of work that demonstrates analysis, problem solving, and communication.</p>
+        <div class="row g-3 mb-4 text-start">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5>CNN for Dog Breed Identification</h5>
+                    <p>Built an end-to-end image classification project using Python and TensorFlow.</p>
+                    <p class="feature-metric">Project Outcome: Full report and documented workflow delivered.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5>Sustainable Playground Design</h5>
+                    <p>Converted sustainability ideas into practical design concepts and prototypes.</p>
+                    <p class="feature-metric">Project Outcome: Final design package and project file completed.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <h5>Mathematics Extended Essay</h5>
+                    <p>Explored decision-making through Nash Equilibrium and structured analysis.</p>
+                    <p class="feature-metric">Project Outcome: Completed analytical essay with applied game theory.</p>
+                </div>
+            </div>
+        </div>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="flip-card">
@@ -1159,6 +1220,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+<!-- What I Bring -->
+<section id="what-i-bring" data-aos="fade-up">
+    <div class="container">
+        <h2 class="section-title text-center">What I Bring</h2>
+        <div class="row g-3 mt-1">
+            <div class="col-md-4">
+                <div class="value-card">
+                    <h5>Analysis</h5>
+                    <p>I break down problems, work with data, and turn findings into useful recommendations.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <h5>Execution</h5>
+                    <p>I plan, organize, and follow through, whether it is research delivery, events, or project work.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="value-card">
+                    <h5>Communication</h5>
+                    <p>I communicate clearly with stakeholders and adapt my message to different audiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <!-- Education & Experience Section -->
 <section id="education-experience" class="py-5">
     <div class="container">
@@ -1212,47 +1301,48 @@ document.addEventListener("DOMContentLoaded", () => {
                         <span class="year">Oct 2022 - Current</span>
                         <h5 class="fw-bold">Student Ambassador</h5>
                         <p>University of Reading</p>
+                    <p class="experience-label">What I did</p>
                     <ul class="impact-list">
                         <li>Represent the university at tours, open days, and orientation activities for prospective and current students.</li>
-                        <li>Deliver clear and engaging communication to varied audiences while coordinating with university staff.</li>
-                        <li>Support a positive and inclusive student experience through organized, people-focused event delivery.</li>
+                        <li>Deliver clear communication to varied audiences while coordinating with university staff.</li>
                     </ul>                        
-                    <p class="proof-line">Contributed to 60+ tours and student-facing events across admissions and orientation periods.</p>
+                    <p class="proof-line"><strong>Outcome:</strong> Contributed to 60+ tours and student-facing events across admissions and orientation periods.</p>
                     </div>
                     <!-- Sanitation Volunteer -->
                     <div class="timeline-card">
                         <span class="year">Feb 2021 - May 2022</span>
                         <h5 class="fw-bold">Researcher</h5>
                         <p>Sanitation and Hygiene Awareness/Research Project (SHARP)</p>
+                    <p class="experience-label">What I did</p>
                     <ul class="impact-list">
                         <li>Researched and wrote awareness content, publishing four articles focused on sanitation and hygiene.</li>
                         <li>Contributed to community outreach initiatives to distribute essentials and promote healthy practices.</li>
                     </ul>
-                    <p class="proof-line">Delivered 4 published articles and supported 2 local outreach activities.</p>
+                    <p class="proof-line"><strong>Outcome:</strong> Delivered 4 published articles and supported 2 local outreach activities.</p>
                     </div>
                     <!-- Mental Health Volunteer -->
                     <div class="timeline-card">
                         <span class="year">Aug 2020 - May 2022</span>
                         <h5 class="fw-bold">Co-Head of Research</h5>
                         <p>A Will To Live (AWTL)</p>
+                    <p class="experience-label">What I did</p>
                     <ul class="impact-list">
                         <li>Led research planning and content development for mental health awareness initiatives.</li>
                         <li>Worked with senior leadership to coordinate team recruitment and research operations.</li>
-                        <li>Promoted to Co-Head of Research within two months based on performance and ownership.</li>
                     </ul>
-                    <p class="proof-line">Progressed from team member to Co-Head in 2 months while managing multi-person research coordination.</p>
+                    <p class="proof-line"><strong>Outcome:</strong> Progressed from team member to Co-Head in 2 months while managing multi-person research coordination.</p>
                     </div>
                     <!-- Social Media Intern -->
                     <div class="timeline-card">
                         <span class="year">Jul 2020</span>
                         <h5 class="fw-bold">Social Media Marketing Intern</h5>
                         <p>Paragon Digital Services (Dentsu)</p>
+                    <p class="experience-label">What I did</p>
                     <ul class="impact-list">
                         <li>Supported social media and digital advertising activity in a live agency environment.</li>
                         <li>Used tools including Google AdSense, Facebook Business Manager, and Instagram Insights to monitor campaign performance.</li>
-                        <li>Built practical understanding of campaign planning, reporting, and optimization workflows.</li>
                     </ul>
-                    <p class="proof-line">Worked across 3 campaign analytics platforms to support weekly performance reporting.</p>
+                    <p class="proof-line"><strong>Outcome:</strong> Worked across 3 campaign analytics platforms to support weekly performance reporting.</p>
                     </div>
                 </div>
             </div>
