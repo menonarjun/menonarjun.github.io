@@ -761,7 +761,11 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     // ✅ Typing Effect
-    const textArray = ["Showcasing my projects", "Sharing my experience", "Highlighting my education"];
+    const textArray = [
+        "Turning ideas into practical business outcomes",
+        "Blending analytics, marketing, and stakeholder focus",
+        "Ready to contribute from day one"
+    ];
     let index = 0, charIndex = 0;
     const typingText = document.querySelector('.typing-text');
 
@@ -878,6 +882,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education-experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="#education-experience">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
@@ -905,16 +910,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <!-- Tagline Bar -->
         <div class="tagline">
-            BUSINESS MANAGEMENT • MARKETING • STRATEGY
+            GRADUATE • BUSINESS MANAGEMENT • MARKETING • STRATEGY
         </div>
 
         <!-- Buttons -->
         <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
-            <a href="#portfolio" class="btn btn-dark btn-lg cool-btn">🚀 Explore My Work</a>
+            <a href="#portfolio" class="btn btn-dark btn-lg cool-btn">🚀 Explore Projects</a>
             <a href="files/arjun_menon_cv.pdf" class="btn btn-outline-dark btn-lg cool-btn" download>📄 Download CV</a>
         </div>
     </div>
 </section>
+
+
+<!-- Projects Section -->
+<section id="portfolio" class="bg-light" data-aos="fade-up">
+    <div class="container text-center">
+        <h2 class="section-title">Projects</h2>
+        <p class="lead">A selection of work that demonstrates analysis, problem solving, and communication.</p>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/projects/cnn.jpeg" alt="CNN Project" class="img-fluid rounded mb-2">
+                            <h5>CNN for Dog Breed Identification</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Built a convolutional neural network to classify dog breeds from image data.</p>
+                            <button class="btn btn-dark mt-2" data-bs-toggle="modal" data-bs-target="#project1Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/projects/design.jpeg" alt="Sustainable Playground Project" class="img-fluid rounded mb-2">
+                            <h5>Sustainable Playground Design</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Designed playground equipment using recycled materials and prototyping.</p>
+                            <button class="btn btn-dark mt-2" data-bs-toggle="modal" data-bs-target="#project2Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/projects/essay.jpeg" alt="Mathematics Essay Project" class="img-fluid rounded mb-2">
+                            <h5>Mathematics Extended Essay</h5>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Applied game theory to analyze Nash Equilibrium and strategic decision-making.</p>
+                            <button class="btn btn-dark mt-2" data-bs-toggle="modal" data-bs-target="#project3Modal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Modals -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4">
+      <h3>CNN for Dog Breed Identification</h3>
+      <p>Developed a convolutional neural network using Python and TensorFlow to classify dog breeds from image inputs.</p>
+      <p><strong>Focus:</strong> Data preprocessing, model structure, and evaluation.</p>
+      <p><strong>Skills/Tools:</strong> Python, TensorFlow, Neural Networks, Data Preprocessing.</p>
+      <a href="files/cnn_personal_project_Report.pdf" class="btn btn-success mt-3" download>Download Full Report</a>
+      <button class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4">
+      <h3>Sustainable Playground Design</h3>
+      <p>Created playground equipment concepts using recycled materials to balance usability, safety, and sustainability.</p>
+      <p><strong>Focus:</strong> Human-centered design, practical prototyping, and sustainability trade-offs.</p>
+      <p><strong>Skills/Tools:</strong> Product Design, Prototyping, Sustainability Thinking.</p>
+      <a href="files/product_design_project.pdf" class="btn btn-success mt-3" download>Download Project File</a>
+      <button class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4">
+      <h3>Mathematics Extended Essay</h3>
+      <p>Investigated how mathematical modeling supports Nash Equilibrium analysis in strategic decision contexts.</p>
+      <p><strong>Focus:</strong> Structured research, economic reasoning, and communication of complex ideas.</p>
+      <p><strong>Skills/Tools:</strong> Research, Analytical Writing, Mathematical Modeling.</p>
+      <a href="files/maths_extended_essay.pdf" class="btn btn-success mt-3" download>Download Extended Essay</a>
+      <button class="btn btn-secondary mt-3" data-bs-dismiss="modal">Close</button>
+    </div>
+  </div>
+</div>
 
 
 
@@ -930,7 +1030,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="col-md-8">
                 <h2 class="section-title">About Me</h2>
-                <p class="lead">Hi! I’m Arjun Menon, a Business Management Graduate from Henley Business School, passionate about strategy, marketing, and leadership. I love turning ideas into actionable solutions and building strong client relationships.</p>
+                <p class="lead">I am a Business Management graduate from Henley Business School (2:1) with hands-on experience across student engagement, research, and marketing. I enjoy translating ideas into structured plans, using data to support decisions, and working with people to deliver practical outcomes.</p>
             </div>
                             <!-- Flip Cards -->
                 <div class="row mt-4 g-3">
@@ -940,10 +1040,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                     🎓
-                                    <p>Graduated from Henley Business School</p>
+                                    <p>Academic Profile</p>
                                 </div>
                                 <div class="flip-card-back">
-                                    <p>BSc Business Management</p>
+                                    <p>BSc Business Management (2:1), Henley Business School</p>
                                 </div>
                             </div>
                         </div>
@@ -955,10 +1055,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                     🌍
-                                    <p>Based In</p>
+                                    <p>Location</p>
                                 </div>
                                 <div class="flip-card-back">
-                                    <p>Loughborough, UK</p>
+                                    <p>Loughborough, UK | Open to UK opportunities</p>
                                 </div>
                             </div>
                         </div>
@@ -970,10 +1070,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                     💼
-                                    <p>Current Role</p>
+                                    <p>Experience Focus</p>
                                 </div>
                                 <div class="flip-card-back">
-                                    <p>Student Ambassador</p>
+                                    <p>Student engagement, research, and marketing support</p>
                                 </div>
                             </div>
                         </div>
@@ -985,10 +1085,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
                                     💡
-                                    <p>Interests</p>
+                                    <p>Career Interests</p>
                                 </div>
                                 <div class="flip-card-back">
-                                    <p>Marketing Strategy, Consulting, Digital Business and Self Learner</p>
+                                    <p>Business operations, marketing strategy, and client-facing roles</p>
                                 </div>
                             </div>
                         </div>
@@ -1012,12 +1112,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="timeline-card">
                         <span class="year">September 2022 - July 2025</span>
                         <h5 class="fw-bold">Henley Business School, University of Reading</h5>
-                        <p>BSc in Business Management – Graduated</p>
-                        <p><strong>Achieved Grade:</strong> 2:1</p>
-                        <p><strong>Key Modules:</strong>Developing Personal Leadership, Business Data Analytics, Management Accounting, Marketing Essentials,
-                            Information Systems & Digital Business, The Dark Side of Marketing, Institutions & Emerging Firms, Ways of Thinking About Business, Markets,
-                            Marketing & Management, Accounting for Managers: Business Strategy & Operations, Data Analytics, Organisational Behaviour & HR Management,
-                            Developing Professional Excellence, Strategy & International Business, Optimising Marketing Performance, Social Responsibility in Action.</p>
+                        <p>BSc Business Management, 2:1</p>
+                        <p><strong>Selected Modules:</strong> Business Data Analytics, Strategy & International Business, Optimising Marketing Performance, Organisational Behaviour, Management Accounting, Information Systems & Digital Business.</p>
                     </div>
                     <!-- IB Diploma -->
                     <div class="timeline-card">
@@ -1027,7 +1123,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p><strong>Score:</strong> 28/45</p>
                         <p><strong>Key Subjects:</strong> Business Management (HL), Economics (HL), Mathematics (HL), Physics (SL), English (SL), and Spanish (SL)</p>
                     <ul>
-                        <li>Extended Essay (Mathematics) – ‘How is mathematics present in the Nash Equilibrium’.
+                        <li>Extended Essay (Mathematics) – How is mathematics present in the Nash Equilibrium.</li>
                         <li>Theory of Knowledge (TOK) – Essay and Presentation on the nature of knowledge and how we know what we claim to know on the prompts given by IB.</li>
                         <li>CAS – Creativity, Activity and Service.</li>
                         <li>International Award for Young People (IAYP) – Completed a 5 week youth development program.</li>
@@ -1058,9 +1154,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5 class="fw-bold">Student Ambassador</h5>
                         <p>University of Reading</p>
                     <ul class="impact-list">
-                        <li>Hosted campus tours, orientations, and events to create an inclusive student experience.</li>
-                        <li>Strengthened communication and stakeholder management through collaboration with staff and students.</li>
-                        <li>Built strong program knowledge independently to answer questions clearly and confidently.</li>
+                        <li>Represent the university at tours, open days, and orientation activities for prospective and current students.</li>
+                        <li>Deliver clear and engaging communication to varied audiences while coordinating with university staff.</li>
+                        <li>Support a positive and inclusive student experience through organized, people-focused event delivery.</li>
                     </ul>                        
                     </div>
                     <!-- Sanitation Volunteer -->
@@ -1069,8 +1165,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5 class="fw-bold">Researcher</h5>
                         <p>Sanitation and Hygiene Awareness/Research Project (SHARP)</p>
                     <ul class="impact-list">
-                        <li>Researched and created content for blogs promoting hygiene and sanitation awareness; authored 4 published articles for the SHARP website.</li>
-                        <li>Participated in a community drive to donate essential items and educate villagers on hygiene practices.</li>
+                        <li>Researched and wrote awareness content, publishing four articles focused on sanitation and hygiene.</li>
+                        <li>Contributed to community outreach initiatives to distribute essentials and promote healthy practices.</li>
+                    </ul>
                     </div>
                     <!-- Mental Health Volunteer -->
                     <div class="timeline-card">
@@ -1078,9 +1175,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5 class="fw-bold">Co-Head of Research</h5>
                         <p>A Will To Live (AWTL)</p>
                     <ul class="impact-list">
-                        <li>Led the Research Team, overseeing content development and coordination of awareness initiatives.</li>
-                        <li>Worked closely with senior management to recruit and manage team members effectively.</li>
-                        <li>Promoted to Co-Head of Research within 2 months for exceptional performance and leadership.</li>
+                        <li>Led research planning and content development for mental health awareness initiatives.</li>
+                        <li>Worked with senior leadership to coordinate team recruitment and research operations.</li>
+                        <li>Promoted to Co-Head of Research within two months based on performance and ownership.</li>
+                    </ul>
                     </div>
                     <!-- Social Media Intern -->
                     <div class="timeline-card">
@@ -1088,9 +1186,10 @@ document.addEventListener("DOMContentLoaded", () => {
                         <h5 class="fw-bold">Social Media Marketing Intern</h5>
                         <p>Paragon Digital Services (Dentsu)</p>
                     <ul class="impact-list">
-                        <li>Gained hands-on experience in Social Media Marketing and digital advertising strategies.</li>
-                        <li>Utilized tools such as Google AdSense, Facebook Business Manager, and Instagram Insights to support campaign performance and analytics.</li>
-                        <li>Developed a deeper understanding of roles within the marketing and advertising ecosystem.</li>
+                        <li>Supported social media and digital advertising activity in a live agency environment.</li>
+                        <li>Used tools including Google AdSense, Facebook Business Manager, and Instagram Insights to monitor campaign performance.</li>
+                        <li>Built practical understanding of campaign planning, reporting, and optimization workflows.</li>
+                    </ul>
                     </div>
                 </div>
             </div>
@@ -1104,12 +1203,12 @@ document.addEventListener("DOMContentLoaded", () => {
 <section id="skills" class="py-5">
   <div class="container text-center">
     <h2 class="fw-bold mb-4">Skills & Tools</h2>
-    <p class="lead mb-5">Technologies, strategies, and soft skills I bring to the table.</p>
+    <p class="lead mb-5">A practical toolkit across business analysis, marketing platforms, and team collaboration.</p>
 
     <div class="row">
       <!-- Business Tools -->
       <div class="col-md-4 mb-4">
-        <h4 class="mb-3">📊 Business Tools</h4>
+        <h4 class="mb-3">📊 Business & Analytics</h4>
         <div class="skill">
           <p><img src="icons/microsoft_excel.png" alt="Excel" style="width:25px; margin-right:10px;"> Microsoft Excel</p>
           <div class="progress">
@@ -1132,7 +1231,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <!-- Marketing Tools -->
       <div class="col-md-4 mb-4">
-        <h4 class="mb-3">📢 Marketing Tools</h4>
+        <h4 class="mb-3">📢 Marketing Platforms</h4>
         <div class="skill">
           <p><img src="icons/facebook_business_manager.png" alt="Facebook" style="width:25px; margin-right:10px;"> Facebook Business Manager</p>
           <div class="progress">
@@ -1155,7 +1254,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <!-- Soft Skills -->
       <div class="col-md-4 mb-4">
-        <h4 class="mb-3">🤝 Soft Skills</h4>
+        <h4 class="mb-3">🤝 Professional Skills</h4>
         <div class="skill">
           <p><img src="icons/leadership.png" alt="Leadership" style="width:25px; margin-right:10px;"> Leadership</p>
           <div class="progress">
@@ -1185,6 +1284,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <section id="contact" class="bg-light" data-aos="fade-up">
     <div class="container text-center">
         <h2 class="section-title">Contact Me</h2>
+        <p class="lead">I am open to graduate opportunities across business, operations, and marketing functions.</p>
         <form id="contact-form" class="col-md-8 mx-auto">
             <input type="text" name="from_name" class="form-control mb-3" placeholder="Name" required>
             <input type="email" name="reply_to" class="form-control mb-3" placeholder="Email" required>
@@ -1192,11 +1292,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <input type="hidden" name="title" value="Portfolio Contact Form">
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
+        <p class="mt-4 mb-0"><strong>Email:</strong> <a href="mailto:menonarjun0032@gmail.com">menonarjun0032@gmail.com</a></p>
     </div>
     <div class="text-center mt-5">
         <h5 class="mb-3">Connect with me:</h5>
         <div class="d-flex justify-content-center gap-3">
-            <a href="https://www.linkedin.com/in/arjun-menon-21b932156/"><img src="icons/linkedin.png" alt="LinkedIn" style="width:40px;"></a>
+            <a href="https://www.linkedin.com/in/arjunmenon32/" target="_blank" rel="noopener noreferrer"><img src="icons/linkedin.png" alt="LinkedIn" style="width:40px;"></a>
         </div>
     </div>
 </section>
