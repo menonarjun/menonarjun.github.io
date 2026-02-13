@@ -662,24 +662,27 @@
 
 
 
-        /* Arrow Indicator Styling */
+        /* Handle Indicator Styling */
         .nav-arrow {
             position: absolute;
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
-            background: #000;
-            color: #fff;
-            font-size: 1.2rem;
-            padding: 6px 10px;
-            border-radius: 0 0 8px 8px;
+            width: 34px;
+            height: 5px;
+            background: rgba(15, 23, 42, 0.45);
+            color: transparent;
+            font-size: 0;
+            padding: 0;
+            border-radius: 999px;
             cursor: pointer;
             z-index: 10000;
-            transition: background 0.3s ease;
+            transition: background 0.25s ease, transform 0.25s ease;
         }
 
         .nav-arrow:hover {
-            background: #333;
+            background: rgba(15, 23, 42, 0.7);
+            transform: translateX(-50%) translateY(1px);
         }
 
         /* Show navbar on hover */
@@ -698,7 +701,7 @@
         }
 
         .navbar-wrapper:hover .nav-arrow {
-            transform: translateX(-50%) rotate(180deg);
+            transform: translateX(-50%);
         }
 
         .nav-arrow {
@@ -1183,6 +1186,14 @@
 
         body.dark-mode .text-muted {
             color: #8fa0ba !important;
+        }
+
+        body.dark-mode .nav-arrow {
+            background: rgba(159, 177, 206, 0.42);
+        }
+
+        body.dark-mode .nav-arrow:hover {
+            background: rgba(182, 201, 230, 0.75);
         }
     </style>
 </head>
