@@ -1044,6 +1044,138 @@
                 font-size: 1.45rem;
             }
         }
+
+        /* ============================= */
+        /* Dark Mode Final Overrides */
+        /* ============================= */
+        body.dark-mode {
+            --bg: #0b1220;
+            --surface: #111a2c;
+            --ink: #e5e7eb;
+            --muted: #a6b0c2;
+            --line: #243145;
+            --brand: #7fb4ff;
+            --brand-soft: #14233a;
+            background: radial-gradient(circle at 10% 10%, #111b30 0%, transparent 40%),
+                        radial-gradient(circle at 88% 6%, #1a1631 0%, transparent 34%),
+                        #0b1220;
+            color: var(--ink);
+        }
+
+        body.dark-mode .navbar {
+            background: rgba(10, 16, 28, 0.9) !important;
+            border-bottom: 1px solid var(--line);
+        }
+
+        body.dark-mode .navbar-brand,
+        body.dark-mode .nav-link {
+            color: #dbe7ff !important;
+        }
+
+        body.dark-mode .hero {
+            background: linear-gradient(125deg, #10233f 0%, #1d2642 50%, #2c2238 100%) !important;
+            border-bottom: 1px solid var(--line);
+        }
+
+        body.dark-mode .owner-name,
+        body.dark-mode .typing-text {
+            color: #eef2ff !important;
+            text-shadow: none;
+        }
+
+        body.dark-mode .tagline {
+            background: #0b1220 !important;
+            color: #dbe7ff !important;
+        }
+
+        body.dark-mode .hero-quick-actions a {
+            color: #dbe7ff;
+            background: rgba(11, 18, 32, 0.75);
+            border-color: #2f415f;
+            box-shadow: none;
+        }
+
+        body.dark-mode .hero-quick-actions a:hover {
+            background: #18243a;
+        }
+
+        body.dark-mode #portfolio,
+        body.dark-mode #skills,
+        body.dark-mode #contact,
+        body.dark-mode #about,
+        body.dark-mode #what-i-bring,
+        body.dark-mode #education-experience {
+            background: transparent !important;
+        }
+
+        body.dark-mode .timeline-card,
+        body.dark-mode .feature-card,
+        body.dark-mode .value-card,
+        body.dark-mode .flip-card-front,
+        body.dark-mode .flip-card-back,
+        body.dark-mode .modal-content {
+            background: var(--surface) !important;
+            border-color: var(--line) !important;
+            color: var(--ink) !important;
+        }
+
+        body.dark-mode p,
+        body.dark-mode li,
+        body.dark-mode .lead,
+        body.dark-mode .section-title,
+        body.dark-mode h2,
+        body.dark-mode h4,
+        body.dark-mode h5 {
+            color: var(--ink) !important;
+        }
+
+        body.dark-mode .proof-line,
+        body.dark-mode .feature-metric,
+        body.dark-mode .experience-label {
+            color: #9bc2ff !important;
+        }
+
+        body.dark-mode .opportunity-cta {
+            background: linear-gradient(90deg, #111b2f, #19263f) !important;
+        }
+
+        body.dark-mode .btn-outline-dark {
+            color: #dbe7ff !important;
+            border-color: #6e8fc4 !important;
+            background: rgba(15, 25, 45, 0.25);
+        }
+
+        body.dark-mode .btn-outline-dark:hover {
+            background: #1b2c47 !important;
+            border-color: #8cb1ee !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .progress {
+            background: #253247 !important;
+        }
+
+        body.dark-mode .progress-bar {
+            background: linear-gradient(90deg, #4f8ee7, #79a8ff);
+        }
+
+        body.dark-mode .form-control {
+            background: #0f1728;
+            border-color: #2a3850;
+            color: #e5e7eb;
+        }
+
+        body.dark-mode .form-control::placeholder {
+            color: #9fb0c8;
+        }
+
+        body.dark-mode a {
+            color: #9bc2ff;
+        }
+
+        body.dark-mode .text-muted {
+            color: #8fa0ba !important;
+        }
     </style>
 </head>
 
@@ -1713,8 +1845,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Dark Mode
   const toggleDarkMode = document.getElementById("toggleDarkMode");
+  const applyThemeLabel = () => {
+    if (!toggleDarkMode) return;
+    toggleDarkMode.textContent = document.body.classList.contains("dark-mode")
+      ? "Light Mode"
+      : "Dark Mode";
+  };
+
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+  applyThemeLabel();
+
   toggleDarkMode.addEventListener("click", () => {
     document.body.classList.toggle("dark-mode");
+    localStorage.setItem(
+      "theme",
+      document.body.classList.contains("dark-mode") ? "dark" : "light"
+    );
+    applyThemeLabel();
   });
 
   // EmailJS (Contact Form)
