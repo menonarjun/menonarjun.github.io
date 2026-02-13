@@ -1249,22 +1249,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(`❌ Failed to send: ${err?.text || err?.message || "Unknown error"}`);
     }
   });
-  // Footer Contact scroll fix (smooth scroll + update URL hash)
-  const footerContactLink = document.getElementById("footerContactLink");
-  if (footerContactLink) {
-    footerContactLink.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const contact = document.getElementById("contact");
-      if (!contact) return;
-
-      // Update the URL hash so it shows .../#contact
-      history.pushState(null, "", "#contact");
-
-      // Smooth scroll to the section
-      contact.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
 });
 </script>
 <footer class="py-4 text-center">
