@@ -1301,7 +1301,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<body>
+<body class="dark-mode">
 <!-- Hidden Navbar with Arrow -->
 <div class="navbar-wrapper">
     <!-- Arrow Indicator -->
@@ -1864,7 +1864,10 @@ document.addEventListener("DOMContentLoaded", () => {
       : "Dark Mode";
   };
 
-  if (localStorage.getItem("theme") === "dark") {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.body.classList.remove("dark-mode");
+  } else {
     document.body.classList.add("dark-mode");
   }
   applyThemeLabel();
