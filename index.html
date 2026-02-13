@@ -748,6 +748,11 @@
             position: relative;
             z-index: 1;
         }
+
+        .contact-highlight {
+            outline: 3px solid #0d6efd;
+            outline-offset: -3px;
+        }
     </style>
 </head>
 
@@ -1212,6 +1217,20 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   // AOS
   AOS.init({ duration: 1000 });
+
+  // Footer Contact: always scroll to section and show a brief highlight
+  const footerContactLink = document.getElementById("footerContactLink");
+  if (footerContactLink) {
+    footerContactLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      const contact = document.getElementById("contact");
+      if (!contact) return;
+
+      contact.scrollIntoView({ behavior: "smooth", block: "start" });
+      contact.classList.add("contact-highlight");
+      setTimeout(() => contact.classList.remove("contact-highlight"), 1200);
+    });
+  }
 
   // Back to Top
   const backToTop = document.getElementById("backToTop");
