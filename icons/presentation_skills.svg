@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Presentation skills icon">
+  <rect x="8" y="10" width="48" height="30" rx="4" fill="#4C6FFF"/>
+  <rect x="12" y="14" width="40" height="22" rx="2" fill="#DDE5FF"/>
+  <rect x="28" y="40" width="8" height="8" fill="#1D2A7A"/>
+  <rect x="22" y="48" width="20" height="4" rx="2" fill="#1D2A7A"/>
+  <circle cx="20" cy="25" r="3" fill="#4C6FFF"/>
+  <path d="M28 30l4-6 3 4 5-8 4 10z" fill="none" stroke="#4C6FFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
