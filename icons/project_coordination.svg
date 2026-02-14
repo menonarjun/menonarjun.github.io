@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Project coordination icon">
+  <rect x="8" y="10" width="48" height="44" rx="8" fill="#10B981"/>
+  <rect x="16" y="18" width="18" height="4" rx="2" fill="#D1FAE5"/>
+  <rect x="16" y="28" width="30" height="4" rx="2" fill="#D1FAE5"/>
+  <rect x="16" y="38" width="24" height="4" rx="2" fill="#D1FAE5"/>
+  <circle cx="48" cy="20" r="3" fill="#064E3B"/>
+  <circle cx="48" cy="30" r="3" fill="#064E3B"/>
+  <circle cx="42" cy="40" r="3" fill="#064E3B"/>
+</svg>
